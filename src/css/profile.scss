@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+@mixin box-shadow($props...) {
+    -webkit-box-shadow: $props;
+    -moz-box-shadow: $props;
+    box-shadow: $props;
+}
+
+$borderRadius: 1px;
+$offset: 150%;
+$inputHeight: 63px;
+$transitionEasing: cubic-bezier(.36, 1, .62, .98);
+
+.profile {
+    overflow: auto;
+    position: relative;
+    margin: 100px auto 0;
+    width: 450px;
+    padding: 30px;
+    background: rgba(255, 255, 255, .13);
+    border-radius: 2 * $borderRadius;
+    color: #fff;
+    margin-bottom: 100px;
+    @include box-shadow(0px 0px 16px 9px rgba(0, 0, 0, 0.07));
+
+    .textInput {
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+    .label {
+        font-weight: bolder;
+        width: 100px;
+    }
+
+    .input {
+        margin-right: 15px;
+    }
+
+    h3 {
+        color: blue;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: bold;
+        color: lightsalmon;
+    }
+
+    h4 {
+        font-style: unset;
+        font-weight: lighter;
+        color: red;
+        margin-bottom: 7px;
+        margin-top: 15px;
+    }
+
+    p {
+        font-style: italic;
+        font-weight: bolder;
+        margin-bottom: 7px;
+        margin-top: 5px;
+    }
+
+    .reservation-container {
+        border-color: aqua;
+        border-top: 2px;
+        border-bottom: 2px;
+    }
+}

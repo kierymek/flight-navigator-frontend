@@ -1,0 +1,40 @@
+@mixin transition($transition...) {
+    -moz-transition: $transition;
+    -webkit-transition: $transition;
+    transition: $transition;
+}
+
+$background1: #433B7C;
+$background2: #2C497F;
+
+.app {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    overflow-y: scroll;
+    background-image: url("../images/plane.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.app-block-wrapper {
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    @include transition(all .85s ease-in-out);
+
+    &--is-login {
+        opacity: .92;
+        background-color: $background2;
+    }
+
+    &--is-signup {
+        opacity: .94;
+        background-color: $background1;
+    }
+}

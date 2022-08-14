@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+@mixin box-shadow($props...) {
+    -webkit-box-shadow: $props;
+    -moz-box-shadow: $props;
+    box-shadow: $props;
+}
+
+$borderRadius: 1px;
+$offset: 150%;
+$inputHeight: 63px;
+$transitionEasing: cubic-bezier(.36, 1, .62, .98);
+
+.reservation {
+    .textInput {
+        font-size: 22px;
+        font-weight: 400;
+    }
+}
